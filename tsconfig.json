@@ -7,5 +7,4 @@
   "compilerOptions": {
     "types": ["vitest/globals"]
   }
-  // "include": ["**/*.test.tsx", "**/*.test.ts", "vitest.d.ts"]
 }

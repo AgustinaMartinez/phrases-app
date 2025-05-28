@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { Input } from "../components/Input.tsx";
-import { PhrasesContext } from "../store/phrases.store.ts";
+import { Input } from "../components/Input";
+import { PhrasesContext } from "../store/phrases.store";
 import { vi, describe, it, expect, beforeEach } from "vitest";
 
 describe("Input", () => {
