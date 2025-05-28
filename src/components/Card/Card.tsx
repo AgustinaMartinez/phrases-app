@@ -1,10 +1,12 @@
-import { usePhrases } from "../../hooks/usePhrases";
 import { TrashIcon, CalendarIcon } from "@primer/octicons-react";
 import type { Phrase } from "../../models/phrase";
 
-export const Card = ({ phrase, index }: { phrase: Phrase; index: number }) => {
-  const { deletePhrase } = usePhrases();
+interface CardProps {
+  phrase: Phrase;
+  onDeleteClick: (id: string) => void;
+}
 
+export const Card = ({ phrase, onDeleteClick }: CardProps) => {
   const datetime = new Date(phrase.createdAt).toLocaleString("es-AR", {
     day: "2-digit",
     month: "2-digit",
@@ -24,7 +26,7 @@ export const Card = ({ phrase, index }: { phrase: Phrase; index: number }) => {
         {datetime} hs
       </div>
       <button
-        onClick={() => deletePhrase(index)}
+        onClick={() => onDeleteClick(phrase.id)}
         className="absolute top-2 right-2 flex md:hidden lg:hidden md:group-hover:flex lg:group-hover:flex items-center justify-center cursor-pointer bg-red-500 text-white border-2 border-black w-8 h-8 rounded-full shadow-[2px_2px_0px_#000000] hover:bg-red-400 transition-all"
         aria-label="Borrar frase"
       >

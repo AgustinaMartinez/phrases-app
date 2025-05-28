@@ -1,5 +1,6 @@
 import { SearchIcon } from "@primer/octicons-react";
 import { usePhrases } from "../../hooks/usePhrases";
+import { v4 as uuidv4 } from "uuid";
 
 export const Input = () => {
   const { input, setInput, phrases, setPhrases, search, setSearch } =
@@ -10,7 +11,7 @@ export const Input = () => {
     if (input.trim() === "") return;
     setPhrases([
       ...phrases,
-      { text: input, createdAt: new Date().toISOString() },
+      { id: uuidv4(), text: input, createdAt: new Date().toISOString() },
     ]);
     setInput("");
   };
@@ -21,7 +22,7 @@ export const Input = () => {
       if (input.trim() === "") return;
       setPhrases([
         ...phrases,
-        { text: input, createdAt: new Date().toISOString() },
+        { id: uuidv4(), text: input, createdAt: new Date().toISOString() },
       ]);
       setInput("");
     }

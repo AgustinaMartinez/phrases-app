@@ -18,12 +18,8 @@ export const PhrasesProvider = ({
     localStorage.setItem("phrases", JSON.stringify(phrases));
   }, [phrases]);
 
-  const deletePhrase = (index: number) => {
-    const sortedPhrases = phrases.sort(
-      (a, b) =>
-        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-    );
-    const newPhrases = sortedPhrases.filter((_, i) => i !== index);
+  const deletePhrase = (id: string) => {
+    const newPhrases = phrases.filter((phrase) => phrase.id !== id);
     setPhrases(newPhrases);
   };
 

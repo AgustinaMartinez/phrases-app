@@ -4,7 +4,7 @@ import type { Phrase } from "../models/phrase.ts";
 export interface PhrasesContextProps {
   phrases: Phrase[];
   setPhrases: (phrases: Phrase[]) => void;
-  deletePhrase: (index: number) => void;
+  deletePhrase: (id: string) => void;
   search: string;
   setSearch: (s: string) => void;
 }

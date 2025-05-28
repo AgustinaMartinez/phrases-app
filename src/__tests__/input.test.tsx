@@ -47,7 +47,7 @@ describe("Input", () => {
     ) as HTMLInputElement;
 
     fireEvent.change(input, { target: { value: "test frase" } });
-    fireEvent.submit(screen.getByText("+ Agregar!").closest("form")!);
+    fireEvent.submit(screen.getByText("Agregar!").closest("form")!);
 
     expect(input.value).toBe("");
   });
