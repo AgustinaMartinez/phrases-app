@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Fredoka', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --white: #ffffff;
+  --black: #000000;
+  
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-shadow {
+  @apply shadow-[4px_4px_0px_#000000] hover:shadow-[6px_6px_0px_#000000] transition-all;
+}
+
+.custom-border {
+  @apply border-4 border-black rounded-md;
+}
