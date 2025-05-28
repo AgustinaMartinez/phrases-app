@@ -1,6 +1,6 @@
-import { usePhrases } from "../hooks/usePhrases";
+import { usePhrases } from "../../hooks/usePhrases";
 import { TrashIcon, CalendarIcon } from "@primer/octicons-react";
-import type { Phrase } from "../models/phrase";
+import type { Phrase } from "../../models/phrase";
 
 export const Card = ({ phrase, index }: { phrase: Phrase; index: number }) => {
   const { deletePhrase } = usePhrases();
@@ -25,7 +25,7 @@ export const Card = ({ phrase, index }: { phrase: Phrase; index: number }) => {
       </div>
       <button
         onClick={() => deletePhrase(index)}
-        className="absolute top-2 right-2 hidden group-hover:flex items-center justify-center cursor-pointer bg-red-500 text-white border-2 border-black w-8 h-8 rounded-full shadow-[2px_2px_0px_#000000] hover:bg-red-400 transition-all"
+        className="absolute top-2 right-2 flex md:hidden lg:hidden md:group-hover:flex lg:group-hover:flex items-center justify-center cursor-pointer bg-red-500 text-white border-2 border-black w-8 h-8 rounded-full shadow-[2px_2px_0px_#000000] hover:bg-red-400 transition-all"
         aria-label="Borrar frase"
       >
         <TrashIcon size={16} />

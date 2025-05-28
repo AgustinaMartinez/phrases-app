@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { Input } from "../components/Input";
+import { Input } from "../components";
 import { PhrasesContext } from "../store/phrases.store";
 import { vi, describe, it, expect, beforeEach } from "vitest";
 

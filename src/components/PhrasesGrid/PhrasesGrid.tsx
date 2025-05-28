@@ -1,5 +1,5 @@
-import { Card } from "./Card";
-import { usePhrases } from "../hooks/usePhrases";
+import { usePhrases } from "../../hooks/usePhrases";
+import { Card } from "../Card/Card";
 
 export const PhrasesGrid = () => {
   const { phrases, search } = usePhrases();

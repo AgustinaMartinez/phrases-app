@@ -1,9 +1,9 @@
-import { BackgroundOverlay } from "./components/BackgroundOverlay";
-import { Header } from "./components/Header";
-import { Input } from "./components/Input";
-import { MainContainter } from "./components/MainContainter";
-import { PhrasesGrid } from "./components/PhrasesGrid";
-import { Layout } from "./Layout";
+import { BackgroundOverlay } from "./components/BackgroundOverlay/BackgroundOverlay";
+import { Header } from "./components/Header/Header";
+import { Input } from "./components/Input/Input";
+import { MainContainter } from "./components/MainContainter/MainContainter";
+import { PhrasesGrid } from "./components/PhrasesGrid/PhrasesGrid";
+import { Layout } from "./layouts/Layout";
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { Card } from "../components/Card";
-import { PhrasesContext } from "../store/phrases.store";
 import { vi, describe, it, expect, beforeEach } from "vitest";
+import { PhrasesContext } from "../store/phrases.store";
+import { Card } from "../components";
 
 const mockContext = {
   deletePhrase: vi.fn(),
