@@ -1,5 +1,5 @@
 export { Card } from './Card/Card';
-export { Input } from './Input/Input';
+export { Form } from './Form/Form';
 export { BackgroundOverlay } from './BackgroundOverlay/BackgroundOverlay';
 export { Header } from './Header/Header';
 export { MainContainter } from './MainContainter/MainContainter';

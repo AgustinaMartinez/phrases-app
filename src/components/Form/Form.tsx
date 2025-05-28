@@ -1,10 +1,9 @@
-import { SearchIcon } from "@primer/octicons-react";
 import { usePhrases } from "../../hooks/usePhrases";
 import { v4 as uuidv4 } from "uuid";
+import { InputSearch } from "../InputSearch/InputSearch";
 
-export const Input = () => {
-  const { input, setInput, phrases, setPhrases, search, setSearch } =
-    usePhrases();
+export const Form = () => {
+  const { input, setInput, phrases, setPhrases } = usePhrases();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -50,19 +49,7 @@ export const Input = () => {
         </button>
         <div className="absolute -bottom-26 left-1/4 -translate-x-1/6 w-6 h-6 bg-pink-400 border-4 border-black rotate-25"></div>
       </form>
-      <div className="relative w-full">
-        <SearchIcon
-          size={20}
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 text-black"
-        />
-        <input
-          type="text"
-          placeholder="Buscá una frase..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="w-full pl-10 pr-4 py-2 bg-gray-100 custom-border font-semibold text-gray-800 placeholder-gray-500 focus:outline-none custom-shadow"
-        />
-      </div>
+      <InputSearch />
     </div>
   );
 };

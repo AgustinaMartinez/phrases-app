@@ -1,8 +1,8 @@
-import { BackgroundOverlay } from "./components/BackgroundOverlay/BackgroundOverlay";
-import { Header } from "./components/Header/Header";
-import { Input } from "./components/Input/Input";
-import { MainContainter } from "./components/MainContainter/MainContainter";
-import { PhrasesGrid } from "./components/PhrasesGrid/PhrasesGrid";
+import { BackgroundOverlay } from "./components";
+import { Header } from "./components";
+import { Form } from "./components";
+import { MainContainter } from "./components";
+import { PhrasesGrid } from "./components";
 import { Layout } from "./layouts/Layout";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <BackgroundOverlay />
       <MainContainter>
         <Header />
-        <Input />
+        <Form />
         <PhrasesGrid />
       </MainContainter>
     </Layout>

@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { Input } from "../components";
+import { Form } from "../components";
 import { PhrasesContext } from "../store/phrases.store";
 import { vi, describe, it, expect, beforeEach } from "vitest";
 
@@ -14,6 +14,7 @@ describe("Input", () => {
     search: "",
     setSearch: vi.fn(),
     deletePhrase: vi.fn(),
+    clearAll: vi.fn(),
   };
 
   beforeEach(() => {
@@ -23,7 +24,7 @@ describe("Input", () => {
   it("updates the input value when typing", () => {
     render(
       <PhrasesContext.Provider value={mockContext}>
-        <Input />
+        <Form />
       </PhrasesContext.Provider>
     );
 
@@ -38,7 +39,7 @@ describe("Input", () => {
   it("clears input on form submit", () => {
     render(
       <PhrasesContext.Provider value={mockContext}>
-        <Input />
+        <Form />
       </PhrasesContext.Provider>
     );
 

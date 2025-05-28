@@ -8,6 +8,7 @@ export const usePhrases = () => {
     deletePhrase,
     search,
     setSearch,
+    clearAll,
   } = useContext(PhrasesContext);
 
   const [input, setInput] = useState<string>("");
@@ -19,6 +20,7 @@ export const usePhrases = () => {
     setPhrases,
     search,
     setSearch,
-    deletePhrase
+    deletePhrase,
+    clearAll
   };
 };

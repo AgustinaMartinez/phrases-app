@@ -6,7 +6,8 @@ export interface PhrasesContextProps {
   setPhrases: (phrases: Phrase[]) => void;
   deletePhrase: (id: string) => void;
   search: string;
-  setSearch: (s: string) => void;
+  setSearch: (search: string) => void;
+  clearAll: () => void;
 }
 
 export const PhrasesContext = createContext<PhrasesContextProps>({
@@ -15,4 +16,5 @@ export const PhrasesContext = createContext<PhrasesContextProps>({
   deletePhrase: () => {},
   search: "",
   setSearch: () => {},
+  clearAll: () => {},
 });

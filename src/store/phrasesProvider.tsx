@@ -23,9 +23,14 @@ export const PhrasesProvider = ({
     setPhrases(newPhrases);
   };
 
+  const clearAll = () => {
+    localStorage.clear();
+    setPhrases([]);
+  };
+
   return (
     <PhrasesContext.Provider
-      value={{ phrases, setPhrases, deletePhrase, search, setSearch }}
+      value={{ phrases, setPhrases, deletePhrase, search, setSearch, clearAll }}
     >
       {children}
     </PhrasesContext.Provider>
