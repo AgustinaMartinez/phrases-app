@@ -15,7 +15,7 @@ export const Card = ({ phrase, index }: { phrase: Phrase; index: number }) => {
   });
 
   return (
-    <div className="break-inside-avoid group relative w-full h-fit p-4 bg-white custom-border custom-shadow duration-200 break-words">
+    <div className="break-inside-avoid group relative w-full h-fit p-4 pr-12 bg-white custom-border custom-shadow duration-200 break-words">
       <p className="text-black font-bold text-base leading-relaxed mb-4">
         {phrase.text}
       </p>
