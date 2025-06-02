@@ -1,0 +1,7 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { XIcon } from "@primer/octicons-react";
+export const DeleteModal = ({ isOpen, phrase, onCancel, onConfirm, }) => {
+    if (!isOpen)
+        return null;
+    return (_jsx("div", { className: "fixed inset-0 z-50 bg-black/90 flex items-center justify-center px-4 min-h-lvh", children: _jsxs("div", { className: "bg-white p-6 rounded-lg border-4 border-black shadow-xl w-full max-w-md relative", children: [_jsx("button", { onClick: onCancel, className: "absolute top-2 right-2 cursor-pointer text-gray-600 hover:text-black", children: _jsx(XIcon, { size: 18 }) }), _jsx("h2", { className: "text-2xl font-black mb-2 flex items-center gap-2", children: "Borrar frase?" }), _jsxs("p", { className: "font-semibold mb-4", children: ["Esta acci\u00F3n es ", _jsx("span", { className: "text-red-500", children: "irreversible" }), "! Ten\u00E9 en cuenta que no vas a poder recuperarla."] }), _jsxs("div", { className: "bg-gray-200 p-3 rounded font-medium italic text-black mb-6 border border-gray-400 break-words", children: ["\"", phrase, "\""] }), _jsxs("div", { className: "flex justify-end gap-4", children: [_jsx("button", { onClick: onCancel, className: "bg-blue-500 hover:bg-blue-600 text-white font-bold px-4 py-2 custom-shadow cursor-pointer rounded border-2 border-black", children: "Mejor no" }), _jsx("button", { onClick: onConfirm, className: "bg-red-500 hover:bg-red-600 text-white font-bold px-4 py-2 custom-shadow cursor-pointer rounded border-2 border-black", children: "Borrar" })] })] }) }));
+};
